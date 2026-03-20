@@ -5,7 +5,7 @@ class UserCredential:
         self.page = page
         self.first = "#first-name"
         self.last = "#last-name"
-        self.pincode = "#postal-code"
+        self.pincode = "#postal"
         self.continuous="#continue"
 
     def user_data(self,first:str,last:str,pincode:str):

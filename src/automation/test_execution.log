@@ -1,0 +1,224 @@
+2026-03-20 13:14:39,211 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 13:14:44,521 - INFO - Login successful
+2026-03-20 13:14:56,010 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:14:56,010 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:14:56,010 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:14:58,130 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:14:58,130 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:14:58,130 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:14:58,130 - INFO - Cart items validated successfully
+2026-03-20 13:15:00,099 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:15:00,099 - INFO - Item removed successfully
+2026-03-20 13:15:02,127 - INFO - Clicked checkout button
+2026-03-20 13:15:05,198 - INFO - User information submitted
+2026-03-20 13:15:05,241 - INFO - Overview Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:15:05,241 - INFO - Overview Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:15:05,241 - INFO - Overview Prices: [9.99, 15.99, 15.99]
+2026-03-20 13:15:05,241 - INFO - Checkout overview items validated
+2026-03-20 13:15:05,264 - INFO - Subtotal from UI: 41.97
+2026-03-20 13:15:05,264 - INFO - Tax from UI: 3.36
+2026-03-20 13:15:05,264 - INFO - Subtotal and tax matched
+2026-03-20 13:15:05,273 - INFO - Total from UI: 45.33
+2026-03-20 13:15:05,273 - INFO - Total price matched
+2026-03-20 13:15:07,246 - INFO - Order finished successfully
+2026-03-20 13:15:37,122 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 13:15:42,359 - INFO - Login successful
+2026-03-20 13:15:50,848 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:15:50,848 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:15:50,848 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:15:51,016 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:15:51,016 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:15:51,016 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:15:51,016 - INFO - Cart items validated successfully
+2026-03-20 13:15:51,074 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:15:51,074 - INFO - Item removed successfully
+2026-03-20 13:15:51,145 - INFO - Clicked checkout button
+2026-03-20 13:23:30,700 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 13:23:36,048 - INFO - Login successful
+2026-03-20 13:23:44,708 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:23:44,708 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:23:44,708 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:23:44,856 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:23:44,856 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:23:44,856 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:23:44,856 - INFO - Cart items validated successfully
+2026-03-20 13:23:44,941 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:23:44,941 - INFO - Item removed successfully
+2026-03-20 13:23:45,036 - INFO - Clicked checkout button
+2026-03-20 13:26:19,004 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 13:26:24,247 - INFO - Login successful
+2026-03-20 13:26:32,851 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:26:32,851 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:26:32,851 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:26:32,990 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:26:32,990 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:26:32,990 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:26:32,990 - INFO - Cart items validated successfully
+2026-03-20 13:26:33,051 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:26:33,051 - INFO - Item removed successfully
+2026-03-20 13:26:33,134 - INFO - Clicked checkout button
+2026-03-20 13:31:38,336 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 13:31:43,589 - INFO - Login successful
+2026-03-20 13:31:52,188 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:31:52,188 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:31:52,189 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:31:52,317 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:31:52,317 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:31:52,317 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:31:52,317 - INFO - Cart items validated successfully
+2026-03-20 13:31:52,374 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:31:52,374 - INFO - Item removed successfully
+2026-03-20 13:31:52,472 - INFO - Clicked checkout button
+2026-03-20 13:33:43,484 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 13:33:48,828 - INFO - Login successful
+2026-03-20 13:33:57,365 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:33:57,369 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:33:57,369 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:33:57,508 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:33:57,508 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:33:57,508 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:33:57,508 - INFO - Cart items validated successfully
+2026-03-20 13:33:57,591 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:33:57,591 - INFO - Item removed successfully
+2026-03-20 13:33:57,672 - INFO - Clicked checkout button
+2026-03-20 13:35:16,980 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 13:35:22,342 - INFO - Login successful
+2026-03-20 13:35:30,831 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:35:30,832 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:35:30,832 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:35:30,977 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:35:30,977 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 13:35:30,977 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 13:35:30,977 - INFO - Cart items validated successfully
+2026-03-20 13:35:31,047 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 13:35:31,047 - INFO - Item removed successfully
+2026-03-20 13:35:31,119 - INFO - Clicked checkout button
+2026-03-20 14:44:30,554 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 14:44:35,936 - INFO - Login successful
+2026-03-20 14:44:44,462 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 14:44:44,462 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 14:44:44,462 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 14:44:44,616 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 14:44:44,616 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 14:44:44,616 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 14:44:44,620 - INFO - Cart items validated successfully
+2026-03-20 14:44:44,686 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 14:44:44,686 - INFO - Item removed successfully
+2026-03-20 14:44:44,772 - INFO - Clicked checkout button
+2026-03-20 14:54:43,231 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 14:54:48,471 - INFO - Login successful
+2026-03-20 14:54:56,799 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 14:54:56,799 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 14:54:56,799 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 14:54:56,877 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 14:54:56,877 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 14:54:56,877 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 14:54:56,878 - INFO - Cart items validated successfully
+2026-03-20 14:54:56,934 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 14:54:56,934 - INFO - Item removed successfully
+2026-03-20 14:54:57,003 - INFO - Clicked checkout button
+2026-03-20 16:34:20,992 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 16:34:26,276 - INFO - Login successful
+2026-03-20 16:34:34,649 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:34:34,649 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:34:34,649 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 16:34:34,736 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:34:34,736 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:34:34,737 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 16:34:34,737 - INFO - Cart items validated successfully
+2026-03-20 16:34:34,791 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:34:34,791 - INFO - Item removed successfully
+2026-03-20 16:34:34,844 - INFO - Clicked checkout button
+2026-03-20 16:34:35,999 - INFO - User information submitted
+2026-03-20 16:34:36,038 - INFO - Overview Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:34:36,038 - INFO - Overview Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:34:36,038 - INFO - Overview Prices: [9.99, 15.99, 15.99]
+2026-03-20 16:34:36,038 - INFO - Checkout overview items validated
+2026-03-20 16:34:36,054 - INFO - Subtotal from UI: 41.97
+2026-03-20 16:34:36,054 - INFO - Tax from UI: 3.36
+2026-03-20 16:34:36,054 - INFO - Subtotal and tax matched
+2026-03-20 16:34:36,054 - INFO - Total from UI: 45.33
+2026-03-20 16:34:36,054 - INFO - Total price matched
+2026-03-20 16:34:36,124 - INFO - Order finished successfully
+2026-03-20 16:34:58,165 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 16:35:03,471 - INFO - Login successful
+2026-03-20 16:35:11,866 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:35:11,866 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:35:11,866 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 16:35:11,949 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:35:11,949 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:35:11,949 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 16:35:11,949 - INFO - Cart items validated successfully
+2026-03-20 16:35:12,004 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:35:12,004 - INFO - Item removed successfully
+2026-03-20 16:35:12,057 - INFO - Clicked checkout button
+2026-03-20 16:43:28,241 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 16:43:33,525 - INFO - Login successful
+2026-03-20 16:43:42,019 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:43:42,019 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:43:42,021 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 16:43:42,176 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:43:42,176 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:43:42,176 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 16:43:42,176 - INFO - Cart items validated successfully
+2026-03-20 16:43:42,236 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:43:42,236 - INFO - Item removed successfully
+2026-03-20 16:43:42,313 - INFO - Clicked checkout button
+2026-03-20 16:43:43,488 - INFO - User information submitted
+2026-03-20 16:43:43,539 - INFO - Overview Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:43:43,539 - INFO - Overview Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:43:43,539 - INFO - Overview Prices: [9.99, 15.99, 15.99]
+2026-03-20 16:43:43,539 - INFO - Checkout overview items validated
+2026-03-20 16:43:43,570 - INFO - Subtotal from UI: 41.97
+2026-03-20 16:43:43,570 - INFO - Tax from UI: 3.36
+2026-03-20 16:43:43,570 - INFO - Subtotal and tax matched
+2026-03-20 16:43:43,591 - INFO - Total from UI: 45.33
+2026-03-20 16:43:43,591 - INFO - Total price matched
+2026-03-20 16:43:43,661 - INFO - Order finished successfully
+2026-03-20 16:44:04,613 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 16:44:09,950 - INFO - Login successful
+2026-03-20 16:44:18,433 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:44:18,433 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:44:18,433 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 16:44:18,556 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:44:18,556 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 16:44:18,556 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 16:44:18,556 - INFO - Cart items validated successfully
+2026-03-20 16:44:18,618 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 16:44:18,619 - INFO - Item removed successfully
+2026-03-20 16:44:18,679 - INFO - Clicked checkout button
+2026-03-20 17:52:58,045 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 17:53:03,270 - INFO - Login successful
+2026-03-20 17:53:11,813 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 17:53:11,814 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 17:53:11,814 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 17:53:11,912 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 17:53:11,912 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 17:53:11,912 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 17:53:11,912 - INFO - Cart items validated successfully
+2026-03-20 17:53:11,985 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 17:53:11,985 - INFO - Item removed successfully
+2026-03-20 17:53:12,067 - INFO - Clicked checkout button
+2026-03-20 17:53:13,303 - INFO - User information submitted
+2026-03-20 17:53:13,344 - INFO - Overview Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 17:53:13,344 - INFO - Overview Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 17:53:13,344 - INFO - Overview Prices: [9.99, 15.99, 15.99]
+2026-03-20 17:53:13,344 - INFO - Checkout overview items validated
+2026-03-20 17:53:13,371 - INFO - Subtotal from UI: 41.97
+2026-03-20 17:53:13,371 - INFO - Tax from UI: 3.36
+2026-03-20 17:53:13,371 - INFO - Subtotal and tax matched
+2026-03-20 17:53:13,388 - INFO - Total from UI: 45.33
+2026-03-20 17:53:13,388 - INFO - Total price matched
+2026-03-20 17:53:13,477 - INFO - Order finished successfully
+2026-03-20 17:53:52,747 - INFO - Starting test: test_add_under_20_and_validate_all
+2026-03-20 17:53:57,983 - INFO - Login successful
+2026-03-20 17:54:06,445 - INFO - Expected Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 17:54:06,445 - INFO - Expected Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 17:54:06,445 - INFO - Expected Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 17:54:06,593 - INFO - Cart Names: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Sauce Labs Onesie', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 17:54:06,593 - INFO - Cart Descriptions: ["A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.", 'Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.', "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.", 'This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.']
+2026-03-20 17:54:06,593 - INFO - Cart Prices: [9.99, 15.99, 7.99, 15.99]
+2026-03-20 17:54:06,593 - INFO - Cart items validated successfully
+2026-03-20 17:54:06,662 - INFO - Cart after remove: ['Sauce Labs Bike Light', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)']
+2026-03-20 17:54:06,662 - INFO - Item removed successfully
+2026-03-20 17:54:06,749 - INFO - Clicked checkout button

@@ -110,7 +110,7 @@ def _extract_selector(exc_value: BaseException, item) -> str:
 
 # ── Hook ──────────────────────────────────────────────────────────────────────
 
-@pytest.hookimpl(hookwrapper=True)
+@pytest.hookimpl(hookwrapper=True,trylast=True)
 def pytest_runtest_makereport(item, call):
     outcome = yield
     report  = outcome.get_result()
