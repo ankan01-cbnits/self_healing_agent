@@ -15,7 +15,7 @@ import os
 
 def _get_required(name: str) -> str:
     """Return an env var or raise a helpful error."""
-    val = os.environ.get(name)
+    val = os.getenv(name)
     if not val:
         raise RuntimeError(
             f"[self-healer] Environment variable '{name}' is not set. "

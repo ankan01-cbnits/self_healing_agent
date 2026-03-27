@@ -21,7 +21,6 @@ def reason_and_suggest(state: AgentState) -> dict:
 
     if not messages:
         is_dynamic = state.get("is_dynamic", False)
-        xpath_candidates = state.get("xpath_candidates") or []
 
         if is_dynamic:
             sys_prompt = SystemMessage(content="""
@@ -78,16 +77,11 @@ REPLY ONLY WITH JSON:
 No extra text. No markdown fences. Be precise with the class names and selectors.
 """)
 
-        # ── 2. TASK PROMPT ────────────────────────────────────────────────────
-        xpath_section = ""
-        if xpath_candidates:
-            ranked = "\n".join(
-                f"  {i+1}. {x}" for i, x in enumerate(xpath_candidates)
-            )
-            xpath_section = f"""
-XPath Candidates (pre-computed, ranked by stability — evaluate each):
-{ranked}
-"""
+#         # ── 2. TASK PROMPT ────────────────────────────────────────────────────
+#             xpath_section = f"""
+# XPath Candidates (pre-computed, ranked by stability — evaluate each):
+# {ranked}
+# """
 
         if is_dynamic:
             task_prompt = HumanMessage(content=f"""
@@ -99,7 +93,6 @@ xpath      : {state['suggestion']}
 confidence : {state['confidence']}
 reason     : {state['reason']}
 intent     : {state['intent']}
-{xpath_section}
 """)
         else:
             task_prompt = HumanMessage(content=f"""
@@ -107,7 +100,6 @@ Test Name : {state['test_name']}
 Selector  : {state['selector']}
 Error     : {state['error']}
 DOM       : {state['dom_context']}
-{xpath_section}
 """)
 
         messages = [sys_prompt, task_prompt]

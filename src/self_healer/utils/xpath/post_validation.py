@@ -31,6 +31,8 @@ def _resolve_placeholders(selector: str, dom_context: str) -> tuple[str, str]:
     Returns:
         (resolved_selector, note_for_llm)
     """
+
+    # unresolved selector for run time: {!s} here s is to be filled
     placeholders = re.findall(r"\{[^}]*\}", selector)
     if not placeholders:
         return selector, ""   # nothing to fix
@@ -42,7 +44,7 @@ def _resolve_placeholders(selector: str, dom_context: str) -> tuple[str, str]:
     context_clue = _infer_placeholder_context(selector)
 
     # --- Extract candidate values from DOM that fit that context ---
-    candidate_value = _extract_candidate_from_dom(dom_context, context_clue)
+    candidate_value = _extract_candidate_from_dom(dom_context, context_clue, placeholder=placeholders[0])
 
     if candidate_value:
         resolved = selector
@@ -90,7 +92,8 @@ def _infer_placeholder_context(selector: str) -> str:
     return "visible text"   # safest default — most placeholders are text matches
 
 
-def _extract_candidate_from_dom(dom_context: str, context_clue: str) -> str:
+#checkpoint
+def _extract_candidate_from_dom(dom_context: str, context_clue: str, placeholder: str = "") -> str:
     """
     Extracts the most likely candidate value from the DOM
     based on what the placeholder context expects.
@@ -105,8 +108,20 @@ def _extract_candidate_from_dom(dom_context: str, context_clue: str) -> str:
             # Meaningful: not too short, not too long, no special chars
             if 3 < len(text) < 60 and not re.search(r"[{}<>]", text):
                 candidates.append(text)
+            
+        if not candidates:
+            return ""
+
+        # Score by similarity to placeholder key e.g. "{item_name}" → "item name"
+        if placeholder:
+            ph_clean = re.sub(r"[^a-z0-9]", " ", placeholder.strip("{}").lower())
+            def score(text):
+                return sum(word in text.lower() for word in ph_clean.split())
+            candidates.sort(key=score, reverse=True)
+
+        return candidates[0]
         # Return the first unique meaningful candidate
-        return candidates[0] if candidates else ""
+        # return candidates[0] if candidates else ""   # checkpoint
 
     if context_clue == "input placeholder text":
         tag = soup.find("input", placeholder=True)

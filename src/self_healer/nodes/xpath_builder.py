@@ -9,7 +9,7 @@ Responsibilities:
   2. Search the current DOM for the element now fulfilling that intent, even
      if its tag, text, or attributes have changed.
   3. Produce a single best XPath suggestion and a plain-English reason, then
-     update state["xpath_suggestion"].
+     update state["xpath_suggestion"].  
 
 State keys consumed:
   - state["selector"]     : the original XPath / CSS selector that failed
@@ -25,7 +25,7 @@ State keys produced:
     On failure / skip: {"xpath": None, "reason": "<why>", "confidence": "low"}
 """
 
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 from ..state import AgentState
 from ..utils.xpath.dom_summarisation import _summarise_dom
 from ..utils.xpath.llm_wrapper import _invoke_llm
@@ -38,26 +38,26 @@ from ..utils.xpath.post_validation import _resolve_placeholders, _validate_xpath
 def xpath_builder(state: AgentState) -> dict:
     """LangGraph / custom-graph node.  Returns a partial state patch."""
 
-    selector: str = state.get("selector", "")
-
+    original_selector : str = state.get("selector", "")
     dom_context: str = state.get("dom_context", "")
     error_msg: str = state.get("error", "")
 
     if not selector or not dom_context:    
         state["suggestion"]=None
-        state["resone"]="Missing selector or DOM context; cannot attempt healing."
+        state["reason"]="Missing selector or DOM context; cannot attempt healing."
         state["intent"]=None
         state["confidence"]="low"
-
-    # --- Resolve unresolved template placeholders before anything else ---
-    selector, placeholder_note = _resolve_placeholders(selector, dom_context)
+        return state
 
     # --- Step 1: distil the DOM to a lean, LLM-friendly summary -------------
     dom_summary = _summarise_dom(dom_context)
 
+    # --- Resolve unresolved template placeholders before anything else ---
+    selector, placeholder_note = _resolve_placeholders(original_selector, dom_context)
+
     # --- Step 2: call the LLM to reason about intent + suggest XPath --------
     suggestions = _invoke_llm(
-        failed_selector=selector,
+        failed_selector=original_selector,
         dom_summary=dom_summary,
         error_msg=error_msg,
         extra_context=placeholder_note
