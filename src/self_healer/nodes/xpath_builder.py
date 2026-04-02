@@ -39,7 +39,6 @@ def xpath_builder(state: AgentState) -> dict:
     """LangGraph / custom-graph node.  Returns a partial state patch."""
 
     selector: str = state.get("selector", "")
-
     dom_context: str = state.get("dom_context", "")
     error_msg: str = state.get("error", "")
 

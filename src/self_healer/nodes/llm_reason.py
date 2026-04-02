@@ -1,5 +1,6 @@
 import json
 from langchain_core.messages import HumanMessage, SystemMessage
+from self_healer.prompts import llm_agent_prompts
 from ..state import AgentState
 from ..config import get_api_key, get_base_url, get_model_name, get_temperature
 from langchain_openai import ChatOpenAI
@@ -18,89 +19,43 @@ def _get_llm():
 def reason_and_suggest(state: AgentState) -> dict:
     messages = state.get("messages", [])
     new_messages = []
-
+    
     if not messages:
         is_xpath = state.get("is_xpath", False)
         xpath_candidates = state.get("xpath_candidates") or []
 
-        if is_xpath:
-            sys_prompt = SystemMessage(content="""
-You are an expert Test Automation AI validating a suggested XPath repair.
-A previous agent has already analyzed the DOM and suggested a fix.
+        # 1. Select the System Prompt
+        sys_content = llm_agent_prompts.XPATH_REPAIR_SYSTEM_PROMPT if is_xpath else llm_agent_prompts.STATIC_SITE_SYSTEM_PROMPT
+        sys_prompt = SystemMessage(content=sys_content)
 
-Your task:
-1. Review the suggested XPath against the DOM and the original intent.
-2. If the suggestion is correct, confirm it.
-3. If it can be improved, provide a better one.
-4. If it is wrong, provide the correct XPath using relational anchoring:
-   - data-testid / data-cy        → Primary choice
-   - aria-label                   → Accessibility-based  
-   - Stable text anchor + axes    → ancestor, following-sibling
-   - placeholder / label relation → For inputs
-
-REPLY ONLY WITH JSON:
-{
-  "suggestion": "confirmed or improved xpath",
-  "reason": "why this xpath is correct or what was wrong with the previous one",
-  "confidence": 0-100,
-  "intent": "brief description of action"
-}
-No extra text. No markdown fences.
-""")
-        else:
-            # ── original static site prompt — completely unchanged ────────────
-            sys_prompt = SystemMessage(content="""
-You are an expert Test Automation AI specialized in healing broken Playwright selectors.
-You will receive a failing selector, the Playwright error, and the most relevant DOM subtree.
-
-Your task:
-1. Analyze why the selector failed (typo, wrong class name, etc.)
-2. Look at available classes/IDs in the DOM and find similar ones
-3. Suggest the CORRECT selector that exists in the actual DOM
-4. Explain the issue and your reasoning
-
-REPLY ONLY WITH JSON:
-{
-  "suggestion": "the corrected xpath",
-  "reason": "explanation of the relational bridge used",
-  "confidence": "how much it is in 0-100 range",
-  "intent": "brief description of action"
-}
-No extra text. No markdown fences. Be precise with the class names and selectors.
-""")
-
-        # ── 2. TASK PROMPT ────────────────────────────────────────────────────
+        # 2. Build the XPath Candidate Section
         xpath_section = ""
         if xpath_candidates:
-            ranked = "\n".join(
-                f"  {i+1}. {x}" for i, x in enumerate(xpath_candidates)
-            )
-            xpath_section = f"""
-XPath Candidates (pre-computed, ranked by stability — evaluate each):
-{ranked}
-"""
+            ranked = "\n".join(f"  {i+1}. {x}" for i, x in enumerate(xpath_candidates))
+            xpath_section = f"\nXPath Candidates (pre-computed, ranked by stability):\n{ranked}\n"
 
+        # 3. Build the Human Task Prompt
         if is_xpath:
-            task_prompt = HumanMessage(content=f"""
-Test Name : {state['test_name']}
-Selector  : {state['selector']}
-Error     : {state['error']}
-DOM       : {state['dom_context']}
-xpath      : {state['suggestion']}
-confidence : {state['confidence']}
-reason     : {state['reason']}
-intent : {state.get('intent', 'Unknown')}
-{xpath_section}
-""")
+            task_content = (
+                f"Test Name : {state['test_name']}\n"
+                f"Selector  : {state['selector']}\n"
+                f"Error     : {state['error']}\n"
+                f"xpath     : {state['suggestion']}\n"
+                f"confidence : {state['confidence']}\n"
+                f"reason    : {state['reason']}\n"
+                f"intent    : {state.get('intent', 'Unknown')}\n"
+                f"{xpath_section}"
+            )
         else:
-            task_prompt = HumanMessage(content=f"""
-Test Name : {state['test_name']}
-Selector  : {state['selector']}
-Error     : {state['error']}
-DOM       : {state['dom_context']}
-{xpath_section}
-""")
-
+            task_content = (
+                f"Test Name : {state['test_name']}\n"
+                f"Selector  : {state['selector']}\n"
+                f"Error     : {state['error']}\n"
+                f"DOM       : {state['dom_context']}\n"
+                # f"{xpath_section}"
+            )
+        
+        task_prompt = HumanMessage(content=task_content)
         messages = [sys_prompt, task_prompt]
         new_messages.extend(messages)
 

@@ -8,22 +8,8 @@ from .nodes.apply_fix import apply_fix
 from .nodes.xpath_builder import xpath_builder
 from .state import AgentState
 
-# def route_after_dom(state: AgentState):
-#     """Conditional routing: dynamic sites get xpath building, static go direct"""
-#     return "xpath" if state.get("is_xpath") else "Dom_Extractor" 
-
 def route_by_selector_type(state: AgentState):
     return "xpath" if state.get("is_xpath") else "Dom_Extractor"
-
-builder = StateGraph(AgentState)
-
-# Add nodes
-builder.add_node("Dom_Extractor", dom_extractor)
-builder.add_node("Reasoning_agent", reason_and_suggest)
-builder.add_node("File_Locator", file_locator)
-builder.add_node("Human_Approval", human_approval)
-builder.add_node("Apply_Fix", apply_fix)
-builder.add_node("xpath", xpath_builder)
 
 def route_after_reasoning(state: AgentState):
     """
@@ -48,6 +34,17 @@ def check_approval(state: AgentState):
     if state.get("approved"):
         return "Apply_Fix"
     return END
+
+
+builder = StateGraph(AgentState)
+
+# Add nodes
+builder.add_node("Dom_Extractor", dom_extractor)
+builder.add_node("Reasoning_agent", reason_and_suggest)
+builder.add_node("File_Locator", file_locator)
+builder.add_node("Human_Approval", human_approval)
+builder.add_node("Apply_Fix", apply_fix)
+builder.add_node("xpath", xpath_builder)
 
 # Set flow
 builder.add_conditional_edges(START,

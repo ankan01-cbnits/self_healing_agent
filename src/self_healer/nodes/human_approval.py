@@ -15,6 +15,7 @@ def human_approval(state: AgentState) -> dict:
 
     suggestion  = state["suggestion"]
     selector    = state["selector"]
+    intent    = state["intent"]
     confidence  = float(state["confidence"])
     reason      = state["reason"]
     timestamp   = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -96,6 +97,10 @@ def human_approval(state: AgentState) -> dict:
     fix.add_row(
         "REASON",
         Text(reason or "N/A", style="white"),
+    )
+    fix.add_row(
+        "INTENT",
+        Text(f" {intent} ", style="bold white on white"),
     )
 
     console.print(

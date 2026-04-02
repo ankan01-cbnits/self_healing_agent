@@ -25,6 +25,7 @@ def dom_extractor(state: AgentState) -> dict:
         focused_dom = safe_serialize(soup.body, char_limit=3000)
 
     hints = build_selector_hints(soup, selector)
+    
     return {
         "dom_context": focused_dom + hints,
         }

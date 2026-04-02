@@ -13,7 +13,7 @@ def run_healing_agent(test_name: str, selector: str, error: str, page) -> None:
             s.startswith("//") or
             s.lower().startswith("xpath=")
         )
-    is_xpath = is_xpath_selector(selector, error)
+    is_xpath = is_xpath_selector(selector)
 
     state = {
         "test_name":   test_name,
@@ -30,7 +30,8 @@ def run_healing_agent(test_name: str, selector: str, error: str, page) -> None:
         "line_number": None,
         "is_xpath":  is_xpath,
         "wait_strategy": "",
-        "failure_mode": ""
+        "failure_mode": "",
+        "retry_count": 0
     }
 
     # Step 1 — LangGraph runs on current thread (inside Playwright's event loop)
