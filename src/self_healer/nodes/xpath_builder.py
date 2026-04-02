@@ -50,7 +50,7 @@ def xpath_builder(state: AgentState) -> dict:
         state["confidence"]="low"
 
     # --- Step 1: distil the DOM to a lean, LLM-friendly summary -------------
-    dom_summary = _summarise_dom(dom_context)
+    dom_summary = _summarise_dom(dom_context, selector)
 
     # --- Resolve unresolved template placeholders before anything else ---
     selector, placeholder_note = _resolve_placeholders(selector, dom_context)
