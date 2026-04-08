@@ -1,4 +1,5 @@
 import json
+import re
 from langchain_core.messages import HumanMessage, SystemMessage
 from self_healer.prompts import llm_agent_prompts
 from ..state import AgentState
@@ -84,8 +85,13 @@ def reason_and_suggest(state: AgentState) -> dict:
 
 def _parse_llm_output(content: str) -> dict:
     try:
-        # Remove markdown fences if present
-        clean = content.strip().replace("```json", "").replace("```", "").strip()
+        # Extract JSON using regex to avoid conversational text
+        match = re.search(r'\{.*\}', content, re.DOTALL)
+        if match:
+            clean = match.group(0)
+        else:
+            clean = content.strip().replace("```json", "").replace("```", "").strip()
+            
         parsed = json.loads(clean)
 
         # Handle the LLM returning a list for "suggestion" or "selector"
@@ -95,13 +101,24 @@ def _parse_llm_output(content: str) -> dict:
         elif not suggestion:
             suggestion = "No suggestion available"
 
-        # Normalize confidence to 0.0 - 1.0 range
-        conf = parsed.get("confidence", 0.0)
+        # Normalize confidence, handling percentages or strings
+        conf_raw = parsed.get("confidence", 0.0)
+        if isinstance(conf_raw, str):
+            conf_raw = conf_raw.replace('%', '').strip()
+            try:
+                conf = float(conf_raw)
+            except ValueError:
+                conf = 0.0
+        else:
+            try:
+                conf = float(conf_raw)
+            except (ValueError, TypeError):
+                conf = 0.0
 
         return {
             "suggestion": suggestion,
             "reason":     parsed.get("reason") or "No reason provided",
-            "confidence": float(conf),
+            "confidence": conf,
             "intent":     parsed.get("intent", "Unknown")
         }
 

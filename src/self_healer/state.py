@@ -24,3 +24,5 @@ class AgentState(TypedDict):
     wait_strategy: Optional[str]
     failure_mode: Optional[str]
     retry_count: int
+    rerun_passed: bool
+    heal_cycles:  int 
