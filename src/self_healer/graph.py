@@ -1,4 +1,5 @@
 from langgraph.graph import StateGraph, START, END
+from self_healer.utils.xpath.post_validation import _unresolve_placeholders
 from .nodes.dom_extractor import dom_extractor
 from .nodes.llm_reason import reason_and_suggest
 from .nodes.file_locator import file_locator
@@ -23,6 +24,9 @@ def route_after_reasoning(state: AgentState):
             return "xpath"
         return "Human_Approval"
 
+    state["suggestion"] = _unresolve_placeholders(
+        broken_selector=state["selector"],
+        fixed_selector=state["suggestion"])
     return "File_Locator"
 
 
@@ -65,38 +69,38 @@ builder.add_node("Human_Approval",  human_approval)
 builder.add_node("Apply_Fix",       apply_fix)
 builder.add_node("xpath",           xpath_builder)
 
-builder.add_conditional_edges(
-    START,
-    route_by_selector_type,
-    {"Dom_Extractor": "Dom_Extractor", "xpath": "xpath"},
-)
+# builder.add_conditional_edges(
+#     START,
+#     route_by_selector_type,
+#     {"Dom_Extractor": "Dom_Extractor", "xpath": "xpath"},
+# )
 
-builder.add_edge("xpath",         "Reasoning_agent")
-builder.add_edge("Dom_Extractor", "Reasoning_agent")
+# builder.add_edge("xpath",         "Reasoning_agent")
+# builder.add_edge("Dom_Extractor", "Reasoning_agent")
 
-builder.add_conditional_edges(
-    "Reasoning_agent",
-    route_after_reasoning,
-    {
-        "xpath":          "xpath",
-        "Human_Approval": "Human_Approval",
-        "File_Locator":   "File_Locator",
-    },
-)
+# builder.add_conditional_edges(
+#     "Reasoning_agent",
+#     route_after_reasoning,
+#     {
+#         "xpath":          "xpath",
+#         "Human_Approval": "Human_Approval",
+#         "File_Locator":   "File_Locator",
+#     },
+# )
 
-builder.add_edge("File_Locator", "Human_Approval")
+# builder.add_edge("File_Locator", "Human_Approval")
 
-builder.add_conditional_edges(
-    "Human_Approval",
-    check_approval,
-    {"Apply_Fix": "Apply_Fix", END: END},
-)
+# builder.add_conditional_edges(
+#     "Human_Approval",
+#     check_approval,
+#     {"Apply_Fix": "Apply_Fix", END: END},
+# )
 
-builder.add_conditional_edges(
-    "Apply_Fix",
-    route_after_fix,
-    {END: END, "Dom_Extractor": "Dom_Extractor", "xpath": "xpath"},
-)
+# builder.add_conditional_edges(
+#     "Apply_Fix",
+#     route_after_fix,
+#     {END: END, "Dom_Extractor": "Dom_Extractor", "xpath": "xpath"},
+# )
 
 self_healing_graph = builder.compile()
 

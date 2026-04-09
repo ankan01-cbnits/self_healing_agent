@@ -13,6 +13,13 @@ _SYSTEM_PROMPT = textwrap.dedent("""
     You will be given:
       1. The FAILED selector (XPath or CSS) and, optionally, the error message.
       2. A compact summary of interactive elements currently in the DOM.
+                                 
+    If failure_mode is "timing":
+    - The XPath may still be correct. Focus on whether wait_strategy should be "explicit_wait".
+    If failure_mode is "unstable_attr":
+    - The element exists but its class/id rotated. Anchor to aria-label, data-testid, or text.
+    If failure_mode is "structure_changed":
+    - The DOM tree restructured. Use ancestor/following-sibling axes relative to stable text.
 
     Your task — think step by step:
       A. INTENT: What was the failed selector *meant* to do?
@@ -27,12 +34,6 @@ _SYSTEM_PROMPT = textwrap.dedent("""
       D. REASON: Explain in 1-3 sentences why you chose this element and XPath.
       E. CONFIDENCE: Rate your confidence as "high", "medium", or "low".
 
-    If failure_mode is "timing":
-    - The XPath may still be correct. Focus on whether wait_strategy should be "explicit_wait".
-    If failure_mode is "unstable_attr":
-    - The element exists but its class/id rotated. Anchor to aria-label, data-testid, or text.
-    If failure_mode is "structure_changed":
-    - The DOM tree restructured. Use ancestor/following-sibling axes relative to stable text.
                          
     You MUST respond with ONLY valid JSON — no markdown, no extra text:
     {
