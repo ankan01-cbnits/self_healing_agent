@@ -1,5 +1,6 @@
 from langgraph.graph import StateGraph, START, END
-from self_healer.utils.xpath.post_validation import _unresolve_placeholders
+from self_healer.nodes.post_reasoning import post_reasoning_processor
+from self_healer.nodes.reset_node import reset_for_reheal
 from .nodes.dom_extractor import dom_extractor
 from .nodes.llm_reason import reason_and_suggest
 from .nodes.file_locator import file_locator
@@ -9,12 +10,10 @@ from .nodes.xpath_builder import xpath_builder
 from .nodes.rerun_engine import TestRerunEngine
 from .state import AgentState
 
-
-def route_by_selector_type(state: AgentState):
+def route_by_selector_type(state: AgentState) -> str:
     return "xpath" if state.get("is_xpath") else "Dom_Extractor"
 
-
-def route_after_reasoning(state: AgentState):
+def route_after_reasoning(state: AgentState) -> str:
     confidence  = state.get("confidence", 0.0)
     retry_count = state.get("retry_count", 0)
     is_xpath    = state.get("is_xpath", False)
@@ -24,9 +23,6 @@ def route_after_reasoning(state: AgentState):
             return "xpath"
         return "Human_Approval"
 
-    state["suggestion"] = _unresolve_placeholders(
-        broken_selector=state["selector"],
-        fixed_selector=state["suggestion"])
     return "File_Locator"
 
 
@@ -50,57 +46,60 @@ def route_after_fix(state: AgentState):
     if heal_cycles >= TestRerunEngine.MAX_HEAL_CYCLES:
         print(f"\n[agent] Max heal cycles ({TestRerunEngine.MAX_HEAL_CYCLES}) reached. Stopping.")
         return END
-
-    # Reset conversational state for a fresh healing attempt
-    state["messages"]    = []
-    state["suggestion"]  = None
-    state["approved"]    = False
-    state["retry_count"] = 0
-
-    return "xpath" if state.get("is_xpath") else "Dom_Extractor"
+    
+    return "Reset_Healer"
 
 
 builder = StateGraph(AgentState)
 
 builder.add_node("Dom_Extractor",   dom_extractor)
 builder.add_node("Reasoning_agent", reason_and_suggest)
+builder.add_node("Post_Reasoning",  post_reasoning_processor)
 builder.add_node("File_Locator",    file_locator)
 builder.add_node("Human_Approval",  human_approval)
 builder.add_node("Apply_Fix",       apply_fix)
 builder.add_node("xpath",           xpath_builder)
+builder.add_node("Reset_Healer",    reset_for_reheal)
 
-# builder.add_conditional_edges(
-#     START,
-#     route_by_selector_type,
-#     {"Dom_Extractor": "Dom_Extractor", "xpath": "xpath"},
-# )
+builder.add_conditional_edges(
+    START,
+    route_by_selector_type,
+    {"Dom_Extractor": "Dom_Extractor", "xpath": "xpath"},
+)
 
-# builder.add_edge("xpath",         "Reasoning_agent")
-# builder.add_edge("Dom_Extractor", "Reasoning_agent")
+builder.add_edge("xpath",         "Reasoning_agent")
+builder.add_edge("Dom_Extractor", "Reasoning_agent")
+builder.add_edge("Reasoning_agent", "Post_Reasoning") 
 
-# builder.add_conditional_edges(
-#     "Reasoning_agent",
-#     route_after_reasoning,
-#     {
-#         "xpath":          "xpath",
-#         "Human_Approval": "Human_Approval",
-#         "File_Locator":   "File_Locator",
-#     },
-# )
+builder.add_conditional_edges(
+    "Post_Reasoning",
+    route_after_reasoning,
+    {
+        "xpath":          "xpath",
+        "Human_Approval": "Human_Approval",
+        "File_Locator":   "File_Locator",
+    },
+)
 
-# builder.add_edge("File_Locator", "Human_Approval")
+builder.add_edge("File_Locator", "Human_Approval")
 
-# builder.add_conditional_edges(
-#     "Human_Approval",
-#     check_approval,
-#     {"Apply_Fix": "Apply_Fix", END: END},
-# )
+builder.add_conditional_edges(
+    "Human_Approval",
+    check_approval,
+    {"Apply_Fix": "Apply_Fix", END: END},
+)
 
-# builder.add_conditional_edges(
-#     "Apply_Fix",
-#     route_after_fix,
-#     {END: END, "Dom_Extractor": "Dom_Extractor", "xpath": "xpath"},
-# )
+builder.add_conditional_edges(
+    "Apply_Fix",
+    route_after_fix,
+    {END: END, "Reset_Healer": "Reset_Healer"},
+)
+
+builder.add_conditional_edges(
+    "Reset_Healer",
+    route_by_selector_type,                        # ✅ reuse existing pure router
+    {"Dom_Extractor": "Dom_Extractor", "xpath": "xpath"},
+)
 
 self_healing_graph = builder.compile()
 
