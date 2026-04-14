@@ -1,6 +1,5 @@
 import re
 import logging
-from self_healer.utils.xpath.post_validation import _unresolve_placeholders
 from self_healer.state import AgentState
 
 logger = logging.getLogger(__name__)
