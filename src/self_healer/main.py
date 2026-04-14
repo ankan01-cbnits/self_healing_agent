@@ -3,8 +3,10 @@ from .graph import graph_init
 
 def run_healing_agent(test_name: str, selector: str, error: str, page) -> None:
     dom_context = page.content()
+    print("SELECTOR OR XPATH: ", selector)
 
     def is_xpath_selector(sel: str) -> bool:
+        print("RECHECK:", sel)
         s = sel.strip()
         return (
             s.startswith("/") or
@@ -33,6 +35,8 @@ def run_healing_agent(test_name: str, selector: str, error: str, page) -> None:
         "rerun_passed":  False,
         "heal_cycles":   0,
     }
+
+
 
     graph = graph_init()
     graph.invoke(state)
